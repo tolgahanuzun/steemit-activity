@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <title>Steemit Activity</title>
+</head>
+<body>
+    <!-- Yandex.Metrika counter --> <script src="https://mc.yandex.ru/metrika/tag.js" type="text/javascript"></script> <script type="text/javascript" > try { var yaCounter22168711 = new Ya.Metrika2({ id:22168711, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } </script> <noscript><div><img src="https://mc.yandex.ru/watch/22168711" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<div class="row align-center">
+    <div class="col col-6">
+        <fieldset>
+        <legend>Steemit Activity</legend>
+        <p>Enter the Post link to check the activity. </p>
+        
+        <form action="/" method="post">
+
+        <div class="row align-center">
+            <div class="form-item">
+                <div class="prepend w500">
+                    <span>Post link</span>
+                    <input type="link" name="link" placeholder="link">
+                </div>
+<br>
+                <div class="form-item form-checkboxes">
+                        
+                        <span class="label badge custom">Select Activity Type(s)</span>
+                        <label class="checkbox">
+                            <input type="checkbox" name="comment" id="comment"> Comment
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="follow" id="follow"> Follow
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="upvote" id="vote"> Upvote
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="rt" id="rt"> Resteem
+                        </label>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row align-center">
+            <div class="form-item align-center">
+                <button id="save" >Show</button> 
+            </div>
+        </div>
+
+        </form>
+    </fieldset>
+
+        
+    <div id='slide'>
+        
+        {% block content %}{% endblock %}
+    </div>
+    
+</div>
+    
+ </body>
+</html>

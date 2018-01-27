@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+{% if data %}
+
+{% if data.result %}
+<div class="row align-center">
+
+	<label > Total user :{{data.count}}</label> 
+</div>
+<div class="row align-center">
+
+	<div style="height:300px;width:300px;margin: 30px;overflow:auto;">
+		<table class="unstyled">
+			<tr><td>ID</td><td>Profile Link</td></tr>
+			{% for res in data.result %}
+			<tr><td>{{loop.index }}</td><td><a href="http://steemit.com/@{{res}}">{{res}}</a></td></tr>
+			{% endfor %}
+		</table>
+	</div>
+	<div style="height:320px;width:300px;margin: 30px;overflow:auto;">
+			<table class="unstyled">
+				<textarea rows="12" cols="100">
+				{%- for res in data.result -%}{{res}}, &nbsp;{%- endfor -%}
+			</textarea>
+			</table>
+		</div>
+</div>
+{% endif %}
+
+{% if data.error %}
+<h2> 
+{{data.error}}
+</h2> 
+
+{% endif %}
+
+
+{% else %}
+	
+
+{% endif %}
+{% endblock %}
